@@ -1,0 +1,26 @@
+[
+  {
+    "id": "eval_01",
+    "query": "How to resolve ERR_TF_LOCK_423 in CI/CD pipelines?",
+    "expected_doc_id": "runbook_tf_02",
+    "query_type": "exact_code"
+  },
+  {
+    "id": "eval_02",
+    "query": "What causes container crash loops and memory failures?",
+    "expected_doc_id": "runbook_aks_01",
+    "query_type": "semantic"
+  },
+  {
+    "id": "eval_03",
+    "query": "Why are pods not receiving IP addresses in our cluster subnet?",
+    "expected_doc_id": "runbook_cni_03",
+    "query_type": "semantic"
+  },
+  {
+    "id": "eval_04",
+    "query": "What is required for Key Vault SOC2 compliance?",
+    "expected_doc_id": "runbook_sec_04",
+    "query_type": "semantic"
+  }
+]

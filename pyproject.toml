@@ -1,0 +1,22 @@
+[project]
+name = "enterprise-hybrid-rag-eval-engine"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.15"
+dependencies = [
+    "fastapi[standard]>=0.162.2",
+    "httpx>=0.28.1",
+    "numpy>=2.5.4",
+    "pydantic>=2.14.3",
+    "pytest>=9.2.0",
+    "pytest-asyncio>=1.4.1.post1",
+    "uvicorn>=0.54.0",
+]
+
+[project.scripts]
+enterprise-hybrid-rag-eval-engine = "enterprise_hybrid_rag_eval_engine:main"
+
+[build-system]
+requires = ["uv_build>=0.13.7,<0.14.0"]
+build-backend = "uv_build"

@@ -1,0 +1,22 @@
+name: CI Evaluation Gate
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+jobs:
+  eval-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install uv and dependencies
+        run: |
+          curl -LsSf https://astral.sh/uv/install.sh | sh
+          uv pip install --system "fastapi[standard]" httpx pydantic numpy pytest pytest-asyncio uvicorn
+      - name: Run Pytest & Benchmark Evaluation Suite
+        run: |
+          pytest -v -s tests/test_eval_pipeline.py
